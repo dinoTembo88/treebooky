@@ -2,10 +2,10 @@
   <h1>All of the Statuses</h1>
 </div>
 
-<%= link_to "Add New Status", new_status_path, class: "btn btn-lg btn-default" %>
+<%= link_to "Post New Status", new_status_path, class: "btn btn-lg btn-success" %>
 <% @statuses.each do |status| %>
   <div class="status">
-      <strong>ime</strong>
+      <strong><%= status.user.full_name %></strong>
       <p>
         <%= status.content %>
       </p>
